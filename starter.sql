@@ -1,8 +1,10 @@
-SET SERVEROUTPUT ON
+SET SERVEROUTPUT ON;
 
 DECLARE
-    marks NUMBER := &marks;
+    marks NUMBER;
 BEGIN
+    marks := &marks;
+
     IF marks >= 50 THEN
         DBMS_OUTPUT.PUT_LINE('PASS');
     ELSE
